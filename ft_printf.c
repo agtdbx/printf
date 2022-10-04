@@ -6,7 +6,7 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:05:32 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/04 15:42:24 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:20:53 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,23 @@
 
 int	ft_printf(const char *str, ...)
 {
-	//va_list	valist;
+	va_list	args;
 	//void	*tmp;
-	//int		size;
-	//int		i;
+	int		i;
 
-	(void)str;
-	/*size = 0;
-	va_start(valist, size);
+	va_start(args, str);
 	i = 0;
-	while (i < size)
+	while (str[i] != '\0')
 	{
-		//tmp = va_arg(valist, void *);
+		ft_putchar_fd(str[i], 0);
 		i++;
 	}
-	va_end(valist);*/
+	/*tmp = va_arg(args, void *);
+	while (tmp != NULL)
+	{
+		tmp = va_arg(args, void *);
+
+	}*/
+	va_end(args);
 	return (0);
 }
