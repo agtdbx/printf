@@ -6,7 +6,7 @@
 #    By: aderouba <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 15:01:30 by aderouba          #+#    #+#              #
-#    Updated: 2022/10/04 16:07:19 by aderouba         ###   ########.fr        #
+#    Updated: 2022/10/05 15:40:03 by aderouba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ NAME = libftprintf.a
 
 LIBFT_PATH = libft
 
-SRC =	ft_printf.c
+SRC =	ft_printf.c \
+		ft_utils.c \
+		ft_utils2.c
 
 OBJ = ${SRC:.c=.o}
 
