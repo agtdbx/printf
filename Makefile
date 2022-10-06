@@ -6,15 +6,11 @@
 #    By: aderouba <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 15:01:30 by aderouba          #+#    #+#              #
-#    Updated: 2022/10/06 12:46:44 by aderouba         ###   ########.fr        #
+#    Updated: 2022/10/06 13:00:36 by aderouba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-MAKEFLAGS = --no-print-directory
-
 NAME = libftprintf.a
-
-LIBFT_PATH = libft
 
 SRC =	ft_printf.c \
 		ft_utils.c \
