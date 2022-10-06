@@ -6,7 +6,7 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:05:32 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 10:57:02 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:43:27 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,13 @@ static int	print_param(char pc, char c, va_list args)
 		return (ft_print_upperhex(va_arg(args, unsigned int)));
 	if (c == 'p')
 		return (ft_print_pointer(va_arg(args, void *)));
-	ft_putchar_fd(pc, 0);
-	ft_putchar_fd(c, 0);
+	if (c == '%')
+	{
+		ft_putchar_fd(c, 1);
+		return (1);
+	}
+	ft_putchar_fd(pc, 1);
+	ft_putchar_fd(c, 1);
 	return (2);
 }
 
@@ -54,7 +59,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else
 		{
-			ft_putchar_fd(str[i], 0);
+			ft_putchar_fd(str[i], 1);
 			nb_char_print++;
 		}
 		i++;

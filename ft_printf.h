@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:05:46 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 10:40:24 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:25:24 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft/libft.h"
+# include <stdlib.h>
 
-int	ft_printf(const char *, ...);
+int		ft_printf(const char *, ...);
 
-int	ft_print_char(char c);
-int	ft_print_string(char *str);
-int	ft_print_int(int nb);
-int	ft_print_uint(unsigned int nb);
+int		ft_print_char(char c);
+int		ft_print_string(char *str);
+int		ft_print_int(int nb);
+int		ft_print_uint(unsigned int nb);
 
-int	ft_print_lowerhex(unsigned int nb);
-int	ft_print_upperhex(unsigned int nb);
-int	ft_print_pointer(void *p);
+int		ft_print_lowerhex(unsigned int nb);
+int		ft_print_upperhex(unsigned int nb);
+int		ft_print_pointer(void *p);
+
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+size_t	ft_strlen(const char *str);
 
 #endif

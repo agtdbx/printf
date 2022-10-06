@@ -6,7 +6,7 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:57:33 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/05 15:39:37 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:48:35 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_char(char c)
 {
-	ft_putchar_fd(c, 0);
+	ft_putchar_fd(c, 1);
 	return (1);
 }
 
@@ -22,10 +22,10 @@ int	ft_print_string(char *str)
 {
 	if (str == NULL)
 	{
-		ft_putstr_fd("(null)", 0);
+		ft_putstr_fd("(null)", 1);
 		return (6);
 	}
-	ft_putstr_fd(str, 0);
+	ft_putstr_fd(str, 1);
 	return (ft_strlen(str));
 }
 
@@ -47,7 +47,7 @@ int	ft_print_int(int nb)
 		cpt++;
 	}
 	cpt++;
-	ft_putnbr_fd(nb, 0);
+	ft_putnbr_fd(nb, 1);
 	return (cpt);
 }
 
@@ -55,7 +55,7 @@ static void	print_uint(unsigned int nb)
 {
 	if (nb >= 10)
 		print_uint(nb / 10);
-	ft_putchar_fd(nb % 10 + '0', 0);
+	ft_putchar_fd(nb % 10 + '0', 1);
 }
 
 int	ft_print_uint(unsigned int nb)
