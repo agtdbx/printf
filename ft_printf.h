@@ -6,7 +6,7 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:05:46 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/05 17:56:43 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:40:24 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	ft_print_uint(unsigned int nb);
 
 int	ft_print_lowerhex(unsigned int nb);
 int	ft_print_upperhex(unsigned int nb);
-//int	ft_print_pointer(void *p);
+int	ft_print_pointer(void *p);
 
 #endif
