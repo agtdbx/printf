@@ -6,7 +6,7 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:02:48 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 12:41:12 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:47:17 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*itoa_hex(size_t nb, char *base, char *str)
 int	ft_print_lowerhex(unsigned int nb)
 {
 	unsigned int	tmp;
-	int			cpt;
+	int				cpt;
 
 	cpt = 0;
 	tmp = nb;

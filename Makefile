@@ -6,7 +6,7 @@
 #    By: aderouba <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 15:01:30 by aderouba          #+#    #+#              #
-#    Updated: 2022/10/06 11:37:07 by aderouba         ###   ########.fr        #
+#    Updated: 2022/10/06 12:46:44 by aderouba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,4 @@ fclean : clean
 
 re : fclean $(NAME)
 
-test: $(NAME)
-	gcc -g test.c -L. -lftprintf
-	./a.out
-
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re

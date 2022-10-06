@@ -6,11 +6,10 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:05:32 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 12:43:27 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:48:19 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
 #include "ft_printf.h"
 
 static int	print_param(char pc, char c, va_list args)

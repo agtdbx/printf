@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:05:46 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 11:25:24 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:54:46 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdlib.h>
+# include <stdarg.h>
 
-int		ft_printf(const char *, ...);
+int		ft_printf(const char *str, ...);
 
 int		ft_print_char(char c);
 int		ft_print_string(char *str);
