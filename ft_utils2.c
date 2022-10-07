@@ -6,7 +6,7 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:02:48 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 12:47:17 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/07 13:45:24 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*itoa_hex(size_t nb, char *base, char *str)
 	return (res);
 }
 
-int	ft_print_lowerhex(unsigned int nb)
+void	ft_print_lowerhex(unsigned int nb, int *nb_char_print)
 {
 	unsigned int	tmp;
 	int				cpt;
@@ -55,10 +55,10 @@ int	ft_print_lowerhex(unsigned int nb)
 	}
 	cpt++;
 	print_hex(nb, "0123456789abcdef");
-	return (cpt);
+	*nb_char_print += cpt;
 }
 
-int	ft_print_upperhex(unsigned int nb)
+void	ft_print_upperhex(unsigned int nb, int *nb_char_print)
 {
 	unsigned int	tmp;
 	int				cpt;
@@ -72,10 +72,10 @@ int	ft_print_upperhex(unsigned int nb)
 	}
 	cpt++;
 	print_hex(nb, "0123456789ABCDEF");
-	return (cpt);
+	*nb_char_print += cpt;
 }
 
-int	ft_print_pointer(void *p)
+void	ft_print_pointer(void *p, int *nb_char_print)
 {
 	char	*res;
 	int		len;
@@ -83,16 +83,17 @@ int	ft_print_pointer(void *p)
 	if (p == NULL)
 	{
 		ft_putstr_fd("(nil)", 1);
-		return (5);
+		*nb_char_print += 5;
+		return ;
 	}
 	res = malloc(sizeof(char));
 	if (res == NULL)
-		return (0);
+		return ;
 	res[0] = '\0';
 	res = itoa_hex((size_t)p, "0123456789abcdef", res);
 	len = ft_strlen(res);
 	ft_putstr_fd("0x", 1);
 	ft_putstr_fd(res, 1);
 	free(res);
-	return (len + 2);
+	*nb_char_print += len + 2;
 }

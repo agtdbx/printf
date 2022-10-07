@@ -6,30 +6,31 @@
 /*   By: aderouba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:57:33 by aderouba          #+#    #+#             */
-/*   Updated: 2022/10/06 11:48:35 by aderouba         ###   ########.fr       */
+/*   Updated: 2022/10/07 13:45:13 by aderouba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(char c)
+void	ft_print_char(char c, int *nb_char_print)
 {
 	ft_putchar_fd(c, 1);
-	return (1);
+	*nb_char_print += 1;
 }
 
-int	ft_print_string(char *str)
+void	ft_print_string(char *str, int *nb_char_print)
 {
 	if (str == NULL)
 	{
 		ft_putstr_fd("(null)", 1);
-		return (6);
+		*nb_char_print += 6;
+		return ;
 	}
 	ft_putstr_fd(str, 1);
-	return (ft_strlen(str));
+	*nb_char_print += ft_strlen(str);
 }
 
-int	ft_print_int(int nb)
+void	ft_print_int(int nb, int *nb_char_print)
 {
 	long	tmp;
 	int		cpt;
@@ -48,7 +49,7 @@ int	ft_print_int(int nb)
 	}
 	cpt++;
 	ft_putnbr_fd(nb, 1);
-	return (cpt);
+	*nb_char_print += cpt;
 }
 
 static void	print_uint(unsigned int nb)
@@ -58,7 +59,7 @@ static void	print_uint(unsigned int nb)
 	ft_putchar_fd(nb % 10 + '0', 1);
 }
 
-int	ft_print_uint(unsigned int nb)
+void	ft_print_uint(unsigned int nb, int *nb_char_print)
 {
 	unsigned int	tmp;
 	int				cpt;
@@ -72,5 +73,5 @@ int	ft_print_uint(unsigned int nb)
 	}
 	cpt++;
 	print_uint(nb);
-	return (cpt);
+	*nb_char_print += cpt;
 }
